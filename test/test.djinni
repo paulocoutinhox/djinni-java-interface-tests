@@ -1,0 +1,11 @@
+@extern "../my-lib/yaml/yaml-interface-test.yaml"
+
+extern_java_interface_only = interface +j
+{
+    foo(i: test_java_interface_only): test_java_interface_only;
+}
+
+extern_java_abstract_class_only = interface +j
+{
+    foo(i: test_java_abstract_class_only): test_java_abstract_class_only;
+}

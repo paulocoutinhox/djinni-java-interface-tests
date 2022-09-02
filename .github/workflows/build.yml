@@ -1,0 +1,22 @@
+name: macOS
+
+on: [push]
+
+jobs:
+  build:
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - { name: "macOS", os: macos-latest }
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Generate Files For MyLib
+        run: make generate-my-lib
+
+      - name: Generate Files For Test
+        run: make generate-test
