@@ -10,6 +10,7 @@ To generate Djinni files use:
 
 ```
 make generate-my-lib
+make generate-test
 ```
 
 ## Buy me a coffee
